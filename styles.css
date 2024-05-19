@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+.header {
+    position: absolute;
+    top: 10px; 
+    left: 50%;
+    transform: translateX(-50%);
+    color: #4c5f9e;
+    font-size: 2em; 
+    z-index: 10; 
+    background: transparent;
+}
+canvas {
+    display: block; /* Removes any default padding/margin from the canvas */
+}
