@@ -16,12 +16,12 @@ const camera = new THREE.PerspectiveCamera(
 const textureLoader = new THREE.TextureLoader();
 const cubeTextureLoader = new THREE.CubeTextureLoader();
 scene.background = cubeTextureLoader.load([
-    '/img/stars.jpg',
-    '/img/stars.jpg',
-    '/img/stars.jpg',
-    '/img/stars.jpg',
-    '/img/stars.jpg',
-    '/img/stars.jpg'
+    'https://res.cloudinary.com/dvvcrxzud/image/upload/v1716117505/stars_xclhvs.jpg',
+    'https://res.cloudinary.com/dvvcrxzud/image/upload/v1716117505/stars_xclhvs.jpg',
+    'https://res.cloudinary.com/dvvcrxzud/image/upload/v1716117505/stars_xclhvs.jpg',
+    'https://res.cloudinary.com/dvvcrxzud/image/upload/v1716117505/stars_xclhvs.jpg',
+    'https://res.cloudinary.com/dvvcrxzud/image/upload/v1716117505/stars_xclhvs.jpg',
+    'https://res.cloudinary.com/dvvcrxzud/image/upload/v1716117505/stars_xclhvs.jpg'
 ]);
 
 // Debris
@@ -39,7 +39,7 @@ scene.add(pointLight);
 
 const sunG = new THREE.SphereGeometry(2.5, 32, 32);
 const sunM = new THREE.MeshBasicMaterial({
-    map: textureLoader.load('../img/sun.jpg')
+    map: textureLoader.load('https://res.cloudinary.com/dvvcrxzud/image/upload/v1716117506/sun_i8coel.jpg')
 });
 const sun = new THREE.Mesh(sunG, sunM);
 scene.add(sun);
@@ -57,15 +57,15 @@ function createShape(size, texturePath, position) {
     return { mesh, obj };
 }
 
-const mercury = createShape(0.5, '/img/mercury.jpg', 3.5);
-const venus = createShape(1, '/img/venus.jpg', 5);
-const earth = createShape(1.4, '/img/earth.jpg', 9);
-const mars = createShape(0.6, '/img/mars.jpg', 11.5);
-const jupiter = createShape(1.6, '/img/jupiter.jpg', 15);
-const saturn = createShape(1.6, '/img/saturn.jpg', 19.5);
-const uranus = createShape(0.6, '/img/uranus.jpg', 23.5);
-const neptune = createShape(1.5, '/img/neptune.jpg', 26.5);
-const pluto = createShape(0.4, '/img/pluto.jpg', 30);
+const mercury = createShape(0.5, 'https://res.cloudinary.com/dvvcrxzud/image/upload/v1716117504/mercury_ai17iw.jpg', 3.5);
+const venus = createShape(1, 'https://res.cloudinary.com/dvvcrxzud/image/upload/v1716117505/venus_ew2hpk.jpg', 5);
+const earth = createShape(1.4, 'https://res.cloudinary.com/dvvcrxzud/image/upload/v1716117504/earth_inlk89.jpg', 9);
+const mars = createShape(0.6, 'https://res.cloudinary.com/dvvcrxzud/image/upload/v1716117504/mars_x4vnoo.jpg', 11.5);
+const jupiter = createShape(1.6, 'https://res.cloudinary.com/dvvcrxzud/image/upload/v1716117504/jupiter_jklouc.jpg', 15);
+const saturn = createShape(1.6, 'https://res.cloudinary.com/dvvcrxzud/image/upload/v1716117505/saturn_bc6klj.jpg', 19.5);
+const uranus = createShape(0.6, 'https://res.cloudinary.com/dvvcrxzud/image/upload/v1716117505/uranus_hyryvt.jpg', 23.5);
+const neptune = createShape(1.5, 'https://res.cloudinary.com/dvvcrxzud/image/upload/v1716117504/neptune_tvgxo1.jpg', 26.5);
+const pluto = createShape(0.4, 'https://res.cloudinary.com/dvvcrxzud/image/upload/v1716117504/pluto_xlbph6.jpg', 30);
 
 const orbit = new OrbitControls(camera, renderer.domElement);
 orbit.maxDistance = 40;
